@@ -1,10 +1,11 @@
 package com.example.mvvmfilmproject.data
 
-import com.example.mvvmfilmproject.data.model.models.FilmData
+import com.example.mvvmfilmproject.data.models.FilmData
+import kotlinx.coroutines.delay
 import javax.inject.Inject
 
 class Server @Inject constructor() {
-    private val filmFist = listOf(
+    private val filmList = listOf(
         FilmData(1, getImageLink(1), "Бойцовский клуб", "8.7", false, getDesc(1)),
         FilmData(2, getImageLink(2), "Престиж", "8.5", false, getDesc(3)),
         FilmData(3, getImageLink(3), "Форма воды", "6.9", true, getDesc(3)),
@@ -22,9 +23,16 @@ class Server @Inject constructor() {
         FilmData(15, getImageLink(15), "Интерстеллар", "8.7", true, getDesc(15))
     )
 
-    fun getFilms(): List<FilmData> = filmFist
+    suspend fun getFilms(): List<FilmData> {
+        delay(1000)
+        return filmList
+    }
 
-    fun getFilmDescription(id: Int): FilmData = filmFist[id - 1]
+    fun getFilmById(id: Int): FilmData {
+        return filmList[id]
+    }
+
+    fun getFilmDescription(id: Int): FilmData = filmList[id - 1]
 
     private fun getImageLink(filmId: Int): String {
         val imageList = listOf(

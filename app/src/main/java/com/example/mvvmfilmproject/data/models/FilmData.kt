@@ -1,4 +1,4 @@
-package com.example.mvvmfilmproject.data.model.models
+package com.example.mvvmfilmproject.data.models
 
 data class FilmData(
     val id: Int,
@@ -6,5 +6,5 @@ data class FilmData(
     val name: String,
     val rating: String,
     val isOskar: Boolean,
-    val description: String
-    )
+    val description: String,
+)

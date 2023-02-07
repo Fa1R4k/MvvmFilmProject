@@ -2,4 +2,6 @@
     <string name="app_name">MvvmFilmProject</string>
     <string name="filmName">FilmName</string>
     <string name="description">Description</string>
+    <string name="socket_error">Connection Error</string>
+    <string name="empty">К сожалению список ваших любимый фильмов пуст.</string>
 </resources>
