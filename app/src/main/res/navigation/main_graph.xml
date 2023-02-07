@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_FilmFragment_to_FilmDescriptionFragment"
             app:destination="@id/filmDescriptionFragment" />
+        <action
+            android:id="@+id/action_FilmFragment_to_FavouriteFilmFragment"
+            app:destination="@id/favouriteFilmFragment" />
     </fragment>
     <fragment
         android:id="@+id/filmDescriptionFragment"
@@ -23,5 +26,14 @@
             android:name="id"
             android:defaultValue="0"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFilmFragment"
+        android:name="com.example.mvvmfilmproject.ui.fragment_favourite.FavouriteFilmFragment"
+        android:label="fragment_favourite_film"
+        tools:layout="@layout/fragment_favourite_film" >
+        <action
+            android:id="@+id/action_favouriteFilmFragment_to_filmDescriptionFragment"
+            app:destination="@id/filmDescriptionFragment" />
     </fragment>
 </navigation>

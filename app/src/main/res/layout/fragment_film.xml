@@ -1,19 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
-    tools:context=".ui.fragment_film.FilmFragment"
-    >
+    android:background="@color/back"
+    tools:context=".ui.fragment_film.FilmFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/kino"
+        android:layout_gravity="center"
+        android:layout_marginBottom="125dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="#FF9900"
+        android:layout_marginTop="50dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFilmList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"/>
 
 
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:background="@color/back_menu">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_weight="0.5"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/kino_menu" />
+        />
+
+        <ImageView
+            android:id="@+id/btnToFavoriteFilms"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            android:src="@drawable/like_off" />
+        />
+    </LinearLayout>
 
 
 </FrameLayout>
